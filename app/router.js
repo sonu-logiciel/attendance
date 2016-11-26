@@ -11,7 +11,10 @@ Router.map(function() {
   // this.route('employe');
   this.route('about');
   this.route('contact');
-  this.route('rentals');
+  this.route('rentals', function() {
+    // this.route('index', { path: '/custom-path'})
+  this.route('show', { path: '/:rental_id' });
+  });
 });
 
 export default Router;
